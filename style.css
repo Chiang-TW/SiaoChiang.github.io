@@ -1,0 +1,98 @@
+/* style */
+h3{
+    color: rgb(74, 75, 114);
+}
+.class1{
+    color: aqua;
+}
+.class2{
+    color: aquamarine;
+}
+.class3{
+    background-color: brown;
+}
+/*同時套用id=asd,class=class4*/
+#asd, .class4 {
+    color: rgb(5, 58, 3);
+}
+*{
+    /*將套用到所有標籤*/
+}
+ul li{
+    /*將套用到所有ul底下的li標籤*/
+}
+[type] {
+    /*將套用至所有有type屬性的標籤*/
+}
+#qwe:hover{
+    /* ":hover" 鼠標停留時，將套用*/
+    background-color: gray;
+}
+
+/*   flex   */
+.container{
+    border: 1px solid green;
+    width: 500px;
+    height: 100px;
+    /*改變為flex*/
+    display: flex;
+    /*自動換行*/
+    flex-wrap: wrap;
+    /*主軸顯示方式，以列或行顯示*/
+    flex-direction: row;
+    /*至於主軸中間，flex-end主軸結尾，flex-around平均分配*/
+    justify-content: center;
+    /* 交錯軸，同justify-content，如有換行列，改用align-content */
+    align-items: center;
+}
+
+.container div{
+    border: 1px solid rgb(123,123,123);
+    padding: 10px;
+    width: 100px;
+    height: 10px;
+}
+
+.box-1{
+    /*  顯示大小 = (class的flex數 / flex總數)  */
+    flex: 1;
+    /* 順序左至右，數字小到大，預設都為1 */
+    order: 2;
+}
+
+.box-2{
+    flex: 1;
+}
+
+.box-3{
+    flex: 3;
+}
+
+/* anima */
+/* 定義動畫 動畫名稱 */
+@keyframes change-color{
+    from {background-color: green;}
+    to {background-color: blue;}
+}
+@keyframes change-color2{
+    /* 動畫時間軸 */
+    /* 位置需加上"position: relative;" */
+    0% {background-color: brown; top: 10px; left: 10px;}
+    50% {background-color: aqua; top: 50px; left: 50px;}  
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.box-anima{
+    animation-name: change-color2;
+    /* 執行動畫時間 */
+    animation-duration: 2s;
+    /* 執行動畫次數 */
+    animation-iteration-count: infinite;
+    /* 延遲執行動畫 */
+    animation-delay: 2s;
+}

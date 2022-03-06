@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 撰寫js方法 -->
+    <div>
+        <h1>撰寫js方法</h1>
+        <!-- 1. 直接使用script標籤撰寫js -->
+        <script>
+            document.write("<h2>第1種.寫在html檔<h2>")
+        </script>
+
+        <!-- 2. 寫在js檔裡後引入 -->
+        <script src="javascript.js"></script>
+        
+    </div>
+
+    <!-- 取得html元素 -->
+    <div>
+        <h1 id="header">被取得的元素</h1>
+        <a id="link">【javascript】3小時初學者教學</a>
+        <hr>
+    </div>
+
+    <!-- event listener -->
+    <div>
+        <h1>event listener</h1>
+        <!-- this代表現在所在的元素，此處為button，需再事件前加"on" -->
+        <button id="btn" onclick="handClick(this)">按此</button>
+        <img id="img" src="圖片網址.png" width="500">
+        <hr>
+    </div>
+
+    <!-- 部落格 -->
+    <div>
+        <h1>部落格</h1>
+        <p>標題</p>
+        <input type="text" id="title">
+        <p>內容</p>
+        <textarea id="content" cols="30" rows="10"></textarea>
+        <button id="button">發布</button>
+        <div id="list">
+            <div class="article">
+                <h2>已發布標題</h2>
+                <p>發布內容</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- js檔需擺最後，前面的程式碼才會被讀取得到 -->
+    <script src="get-element.js">
+
+    </script>
+</body>
+</html>

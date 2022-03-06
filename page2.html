@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- style 需寫在head -->
+    <style>
+        /*會被套用css的標籤*/
+        h2{
+            color: rgb(31, 0, 0);
+        }
+    </style>
+    <!--  link:外部引入檔案，需寫在head，rel:引入的檔案為css，herf:引入檔案位置  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- css -->
+    <!--    用";"隔開各css屬性    -->
+    <div style="color :rgb(66, 36, 36); font-size: 40px;">
+        <h1>css基本</h1>
+        <h2>頂端style</h2>
+        <h3>外部style</h3>
+        <p style="color: blue; font-size: 25px;">內層標籤的css覆蓋外層css</p>
+        <p style="background-color: aquamarine;">背景顏色css</p>
+        <p style="border:1px solid black; max-width : 800px;">邊框css：線寬 邊框樣式 邊框顏色，最大寬度：依瀏覽器寬度調整，當寬度大於指定值，不在變寬</p>
+    </div>
+    <hr>
+
+    <!--class-->
+    <div>
+        <h1>class</h1>
+        <p class="class1 class3">在css檔內用 ".class名" 做連接，可有多個class類別</p>
+        <p class="class1">class1.2</p>
+        <p class="class2">class2.1</p>
+        <p class="class2">class2.2</p>
+    </div>
+    <hr>
+
+    <!-- id -->
+    <div>
+        <h1>id</h1>
+        <p id="asd">在html內識別用，id名不能重複，也不能同時有兩個以上個id。使用 "#id名" 做連接</p>
+        <p id="qwe">停留時變色</p>
+    </div>
+    <hr>
+
+    <!-- color -->
+    <div>
+        <h1>color</h1>
+        可用於指定css顏色的方法:
+        <ul>
+            <li style="color: blue;">顏色名</li>
+            <li style="color: #007979;">色碼</li>
+            <li style="color: rgb(48, 2, 2);">rgb</li>
+            <li style="color: hsl(276, 36%, 50%);">hsl</li>
+        </ul>
+        等方法顯示
+    </div>
+    <hr>
+
+    <!-- padding內部空間 -->
+    <div>
+        <h1>padding內部空間</h1>
+        <p style="padding: 20px; border:solid black;">給內部(border內)一個20px空間</p>
+        <p style="padding-bottom: 20px; border: solid black;">給下方20px空間</p>
+        <p style="padding: 30px 40px 50px 60px; border: solid black;">依序 上>右>下>左 給不同空間</p>
+    </div>
+    <hr>
+    
+    <!-- margin外部空間 -->
+    <!-- 與padding功能相似 -->
+    <div>
+        <h1>margin外部空間</h1>
+        <p style="margin: 20px; border:solid black;">給外部(border外)一個20px空間</p>
+        <p style="margin-top: -25px; border:solid rgb(177, 97, 97);">margin能給負數值，但padding不能</p>
+    </div>
+    <hr>
+
+    <!-- float -->
+    <div>
+        <h1>float</h1>
+        <img src="image.png" width="200px" style="float: left;">
+        <p>float像把空間漂浮，可使該標籤的層級向上，並靠向某一側，而後續的內容將與其共用同一排空間</p>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <hr>
+
+    <!-- display -->
+    <div>
+        <h1>display</h1>
+        <p>p標籤顯示方式為block，會占用一整排空間</p>
+        <span>span標籤的顯示方式為inline，不會占用一整排空間。</span>
+        <p style="display: inline;">使用inline將不會占用整排空間</p>
+        <span style="display: block;">使用block將會占用整排空間</span>
+    </div>
+    <hr>
+
+    <!-- position -->
+    <div>
+        <h1>position</h1>
+        <!--fixed-->
+        <div style="position:fixed; bottom: 50px; width: 100px; height: 100px; background-color: rgb(164, 164, 255);">固定在瀏覽器畫面的指定位置上</div>
+        <!--relative-->
+        <div style="position: relative; top: 20px; width: 200px; height: 200px; background-color: rgb(255, 193, 193);">相對定位</div>
+        <br>
+        <!--absolute-->
+        <div style="padding: 30px; border: 5px solid red;">
+            <div style="padding: 30px; border: 5px solid red;">
+                <div style="position: absolute; width: 300px; height: 40px; background-color: aquamarine;">內容調高40px，使外部也因此受影響，且不跟瀏覽器畫面一起移動，但會因為外部position而受影響</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    
+    <!-- opacity -->
+    <div style="background-color: black;">
+        <p style="opacity: 0.3; color: white;">透明度 全透明0~1不透明</p>
+    </div>
+    <hr>
+
+    <!-- border-radius -->
+    <div style="border-radius: 50px 60px 70px 80px; width: 200px; height: 200px; background-color: rgb(157, 157, 255);">
+        圓角，長寬的一半變圓型，四值順序為左上>右上>右下>左下
+    </div>
+    <hr>
+
+    <!--flex-->
+    <!-- 其他程式碼請看style.css -->
+    <div>
+        <div class="container">
+            <div class="box-1">區塊1</div>
+            <div class="box-2">區塊2</div>
+            <div class="box-3">區塊3</div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- animation -->
+    <!-- 其他程式碼請看style.css -->
+    <div>
+        <h1>animation</h1>
+        <div class="box box-anima"></div>
+    </div>
+</body>
+</html>

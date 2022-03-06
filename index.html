@@ -1,12 +1,131 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--註解-->
-        <meta charset="UTF-8"></meta>
+        <!--註解示範-->
+        <!--    " / "符號用於標籤結束   -->
+        <!--    <標籤 標籤屬性="屬性內容"/>    -->
+        <!--    <標籤 標籤屬性="屬性內容">內容</標籤>    -->
+
+        <!--網頁編碼-->
+        <meta charset="UTF-8"/>
+        <!--meta標籤將告訴搜尋關於此網站的資訊-->
+        <meta name="description" content="關於網站的描述">
+        <meta name="author" content="作者">
+        <meta name="keywords" content="關鍵字">
+        <!--    width=device-width根據裝置的寬度調整瀏覽器的寬度，initial-scale=1.0指定初始縮放比為100%，即不縮放    -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>網站標題</title>
     </head>
+
     <body>
-        <h1>Hello World</h1>
-        <p>I'm hosted with GitHub Pages.</p>
+        <!--基本標籤-->
+        <h1>文章標題</h1>
+        <p>文章內文</p>
+        <b>粗體</b>
+        <i>斜體</i>
+
+        <!--換行-->
+        <br/>
+        <!--水平線-->
+        <hr/>
+        
+        <!-- 連結 -->
+        <a href="https://google.com">連結至Google</a>
+        <br/>
+        <a href="page2.html">連結至同資料夾裡的page2.html檔案</a>
+        <br/>
+        <a href="folder/page3.html">連結至子資料夾folder資料夾內的page3.html檔案</a>
+        <br/>
+        <a href="image.png">連結至同資料夾內的image.png圖片檔</a>
+        <br/>
+
+        <!-- 圖片 -->
+        <img src="https://raw.githubusercontent.com/SiaoChiang/SiaoChiang.github.io/main/圖片網址.png"/>
+        <!-- 只使用width或height其中之一將等比縮放 -->
+        <!-- 兩者都用將壓縮圖片 -->
+        <img src="圖片網址.png" width="853" height="480"/>
+        <br>
+
+        <!-- 影片 -->
+        <video src="影片名稱.影片檔名" controls width="720">瀏覽器無法載入影片</video>
+
+        <!-- 嵌入YouTube影片 -->
+        <!--    點擊分享 => 點擊嵌入 => 複製程式碼 => 貼上程式碼    -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CLUPkcLQm64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br/>
+
+        <!-- 列表 -->
+        <ul>
+            <li>無序符號排序</li>
+        </ul>
+
+        <ol>
+            <li>數字排序</li>
+
+            <!-- " "內可自行改變 -->
+            <ol type="A">
+                <li>大寫字母排序</li>
+            </ol>
+        </ol>
+
+        <!--表格-->
+        <!--    加寬表格：<table width="寬度">    -->
+        <table>
+            <tr>
+                <td>第1行第1列</td>
+                <td>第2行第1列</td>
+                <td>第3行第1列</td>
+            </tr>
+            <tr>
+                <td>第1行第2列</td>
+                <td>第2行第2列</td>
+                <td>第3行第2列</td>
+            </tr>
+        </table>
+        <hr/>
+        
+        <!--html容器 div-->
+        <!-- 可快速修改內部屬性，且不影響內容，以提升效率-->
+        <div>
+            此處內容不受影響,
+        </div>
+        <div>但會占用一整排空間</div>
+        <br/>
+
+        <!--html內聯容器 span-->
+        <span>
+            功能與div相同,
+        </span>
+        <span>但不會占用整排的空間</span>
+        <hr/>
+
+        <!-- html輸入標籤 -->
+        <input type="text" placeholder="顯示提示"/>
+        <br/>
+        <br/>
+        <input type="password" placeholder="密碼"/>
+        <br/>
+        <br/>
+        <input type="date">
+        <br/>
+        <br/>
+        <input type="range">
+        <br/>
+        <br/>
+        <input type="file">
+        <br/>
+        <br/>
+        <input type="checkbox">
+        <br/>
+        <br/>
+        <input type="button">
+        <br/>
+        <br/>
+        <input type="email">
+        <br/>
+        <br/>
+
+        <!--輸入大量文字-->
+        <textarea>預設文字</textarea>
     </body>
 </html>
